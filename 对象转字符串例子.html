@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            name: 'jack',
+            age: 20,
+            gender: '男'
+        }
+
+        //我们在数据传输的时候，需要传字符串    name=jack&age=20
+        function obj2str(obj) {
+            let str = "";
+            for (var index in obj) {
+                // key(name,age,gender)等于index
+                // obj[index]等于Jack，20，男
+                console.log(index);
+                console.log(obj[index]);
+                str += index + "=" + obj[index] + "&";
+            }
+            str = str.slice(0, -1)
+            return str
+        }
+        const res = obj2str(obj)
+        console.log(res);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
